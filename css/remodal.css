@@ -6,7 +6,6 @@
 
 html.remodal-is-locked {
   overflow: hidden;
-
   touch-action: none;
 }
 
@@ -39,21 +38,16 @@ html.remodal-is-locked {
   right: 0;
   bottom: 0;
   left: 0;
-
   display: none;
   overflow: auto;
-
   text-align: center;
-
   -webkit-overflow-scrolling: touch;
 }
 
 .remodal-wrapper:after {
   display: inline-block;
-
   height: 100%;
   margin-left: -0.05em;
-
   content: "";
 }
 
@@ -68,9 +62,7 @@ html.remodal-is-locked {
 
 .remodal {
   position: relative;
-
   outline: none;
-
   text-size-adjust: 100%;
 }
 

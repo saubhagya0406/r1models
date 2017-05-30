@@ -92,8 +92,8 @@
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
-						<li><a href="#">Sign In</a></li>
-						<li><a href="#" class="call-to-action">Sign Up</a></li>
+						<li><a data-toggle="modal" data-target="#myModal">Sign In</a></li>
+						<li><a href="signup.html" class="call-to-action" target="_blank">Sign Up</a></li>
 					</ul>
 				</div>
 			</div>
@@ -202,6 +202,33 @@
 			<button href="#" target="_blank"  class="remodal-confirm">Search</button>
 			<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
 	</div>
+
+<!-- Modal Log In-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+					<br><div class="input-group">
+  					<span class="input-group-addon" id="basic-addon3">Username</span>
+  					<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+					</div><br>
+					<div class="input-group">
+  					<span class="input-group-addon" id="basic-addon3">Password</span>
+  					<input type="password" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+					</div><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
