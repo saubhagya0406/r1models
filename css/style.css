@@ -78,7 +78,7 @@ form {
 .form-sub-w3{
 	position:relative;
 }
-.form-sub-w3 input[type="text"],input[type="password"] {
+.form-sub-w3 input[type="text"],input[type="password"],input[type="email"] {
     outline: none;
     font-size: 15px;
     color: #ffffff;
@@ -125,6 +125,37 @@ input[type="submit"] {
     -ms-transition: 0.3s all;
 }
 input[type="submit"]:hover{
+    background: #df5799;
+	color:#ffffff;
+	transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+}
+a {
+    background: #fff;
+    color: #000;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+		width: 15%;
+		text-align: center;
+    padding: 9px 38px;
+    font-size: 14px;
+    margin-top: 55px;
+    font-weight: bold;
+    text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+}
+a:hover{
     background: #df5799;
 	color:#ffffff;
 	transition: 0.3s all;
@@ -261,6 +292,9 @@ label p {
 	.form-sub-w3 input[type="password"] {
 		width: 88%;
 	}
+	.form-sub-w3 input[type="email"] {
+		width: 88%;
+	}
 	.contact-w3-agileits input[type="text"], input[type="email"], input[type="password"] {
 		width: 89%;
 	}
@@ -311,6 +345,9 @@ label p {
 	.form-sub-w3 input[type="text"] {
 		width: 87%;
 	}
+	.form-sub-w3 input[type="email"] {
+		width: 87%;
+	}
 	.form-sub-w3 input[type="password"] {
 		width: 87%;
 	}
@@ -326,6 +363,9 @@ label p {
 		width: 86%;
 	}
 	.form-sub-w3 input[type="text"] {
+		width: 86%;
+	}
+	.form-sub-w3 input[type="email"] {
 		width: 86%;
 	}
 	input[type="submit"] {
@@ -349,7 +389,10 @@ label p {
 	.form-sub-w3 input[type="password"] {
 		width: 84%;
 	}
-	.form-sub-w3 input[type="text"], input[type="password"] {
+	.form-sub-w3 input[type="email"] {
+		width: 84%;
+	}
+	.form-sub-w3 input[type="text"], input[type="password"], input[type="email"] {
 		margin-bottom: 25px;
 	}
 	.form-w3-agile h2 {
@@ -390,6 +433,9 @@ label p {
 	.form-sub-w3 input[type="text"] {
 		width: 85.5%;
 	}
+	.form-sub-w3 input[type="email"] {
+		width: 85.5%;
+	}
 	.copyright p {
 		margin: 100px 0px;
 	}
@@ -411,6 +457,9 @@ label p {
 		padding: 12px 40px 13px 10px;
 	}
 	.form-sub-w3 input[type="password"] {
+		padding: 12px 40px 13px 10px;
+	}
+	.form-sub-w3 input[type="email"] {
 		padding: 12px 40px 13px 10px;
 	}
 	.p-bottom-w3ls {
@@ -524,6 +573,9 @@ label p {
 	.form-sub-w3 input[type="password"] {
 		font-size:14px;
 	}
+	.form-sub-w3 input[type="email"] {
+		font-size:14px;
+	}
 	.form-w3-agile {
 		padding: 40px 30px;
 	}
@@ -531,6 +583,9 @@ label p {
 		width: 84%;
 	}
 	.form-sub-w3 input[type="password"] {
+		width: 84%;
+	}
+	.form-sub-w3 input[type="email"] {
 		width: 84%;
 	}
 	h1 {
@@ -569,6 +624,9 @@ label p {
 		width: 82%;
 	}
 	.form-sub-w3 input[type="password"] {
+		width: 82%;
+	}
+	.form-sub-w3 input[type="email"] {
 		width: 82%;
 	}
 	.form-w3-agile h2 {
@@ -664,6 +722,11 @@ label p {
 		padding: 10px 34px 10px 6px;
 		margin-bottom: 15px;
 		    font-size: 13px;
+	}
+	.form-sub-w3 input[type="email"] {
+		padding: 10px 34px 10px 6px;
+		margin-bottom: 15px;
+				font-size: 13px;
 	}
 	.p-bottom-w3ls {
 		font-size: 12px;
