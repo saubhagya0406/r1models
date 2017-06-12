@@ -8,6 +8,7 @@
 		<!--Remodal-->
 		<link rel="stylesheet" href="css/remodal.css">
 		<link rel="stylesheet" href="css/remodal-default-theme.css">
+
 	</head>
 
 	<style>
@@ -29,7 +30,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+						<span class="avatar"><img src="images/avatar.jpg" alt=""></img></span>
 						<h1>Name</h1>
 						<ul class="icons">
 							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
@@ -38,6 +39,12 @@
 						</ul>
 						<a href="#modal"><button type="button" name="button">Bio</button></a>
 						<br><br><h1><b><u>Gallery/Work</u></b></h1>
+						<center>
+							 <div class="fileUpload button" style="color:black;background-color:#1976d2;width:180px;">
+						   		<span><i class="fa fa-plus"></i>Add (to gallery)</span>
+						      <input type="file" class="upload" onchange=""></input>
+						    </div>
+						</center>
 					</header>
 
 				<!-- Main -->
@@ -118,6 +125,9 @@
 			</div>
 				<br><br><button data-remodal-action="cancel" class="remodal-cancel">Close</button>
 			</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/bootstrap.js"></script>
 
 	</body>
 </html>

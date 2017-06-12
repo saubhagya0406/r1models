@@ -2225,13 +2225,13 @@
 		white-space: nowrap;
 	}
 
-		input[type="submit"]:hover,
+		/*input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
 			background-color: #ff7c96;
-		}
+		}*/
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
@@ -2633,3 +2633,26 @@
 			}
 
 		}
+
+
+
+
+		.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+		.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+	.fileUpload input:hover{
+	 background-color:#2196f3
+}

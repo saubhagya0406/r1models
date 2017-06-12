@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>R1Models | Profile Page</title>
+    <title>r1models | Profile Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -69,11 +69,33 @@
         margin-top: 8px;
         margin-right: 5px;
     }
+    .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
 </style>
 <body>
 
             <div class="card container">
-                <div><center class="pp"><a href="#"><img class="img-responsive img-circle" height="200" width="200" style="margin:20px" src="http://www.worldblaze.in/wp-content/uploads/2015/03/Kriti-Sanon.jpg" alt=""></a></center></div>
+                <div><center class="pp"><img class="img-responsive img-circle" height="200" width="200" style="margin:20px" src="http://icons.iconarchive.com/icons/iloveicons.ru/browser-girl/256/browser-girl-chrome-icon.png" alt="">
+
+                  <div class="fileUpload btn btn-primary">
+                      <span>Upload your profile picture</span>
+                      <input type="file" class="upload" onchange="previewFile()"/>
+                  </div></center></div><br><br>
 
 <div class="container">
 <div class="bs-example">
@@ -315,5 +337,22 @@
 <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 <script src="js/index.js"></script>
+<script>
+function previewFile(){
+ var preview = document.querySelector('img');
+ var file    = document.querySelector('input[type=file]').files[0];
+ var reader  = new FileReader();
+
+ reader.onloadend = function () {
+     preview.src = reader.result;
+ }
+
+ if (file) {
+     reader.readAsDataURL(file);
+ } else {
+     preview.src = "";
+ }
+}
+</script>
 </body>
 </html>
