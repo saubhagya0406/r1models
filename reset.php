@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sign Up :: r1models</title>
+<title>r1models | Reset Password</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="r1models, models, acting, talent, modelling, casting, hire" />
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--Remodal-->
 <link rel="stylesheet" href="css/remodal.css">
@@ -16,7 +17,11 @@
 <!-- web font -->
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
+<?php
+	session_start();
+	if(isset($_SESSION['usr']))
+		header('Location: profile');
+?>
 <!-- //web font -->
 </head>
 <style>
@@ -29,50 +34,43 @@
 		border-style: inset;
 		border-width: 1px;
 	}
+	.inactive:hover{
+		background-color: white;
+		cursor: default;
+		color:black;
+	}
 </style>
 <body>
 <h1>r1models</h1>
 <div class="main-agileits">
 <!--form-stars-here-->
 		<div class="form-w3-agile">
-			<h2>Sign Up</h2>
-			<form action="#" method="post">
+			<h2>Reset Password</h2>
+			<form action="php/rpwd.php" method="post" name="f1" autocomplete="off">
 				<div class="form-sub-w3">
-					<input type="text" name="Name" placeholder="Name " required="" />
+					<input type="text" name="Token" placeholder="Token Number" required/>
 				<div class="icon-w3">
-					<i class="fa fa-user" aria-hidden="true"></i>
+					<i class="fa fa-barcode" aria-hidden="true"></i>
 				</div>
 				</div>
 				<div class="form-sub-w3">
-					<input type="email" name="Email" placeholder="E-mail " required="" />
-				<div class="icon-w3">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-				</div>
-				</div>
-				<div class="form-sub-w3">
-					<input type="text" name="Username" placeholder="Username " required="" />
-				<div class="icon-w3">
-					<i class="fa fa-desktop" aria-hidden="true"></i>
-				</div>
-				</div>
-				<div class="form-sub-w3">
-					<input type="password" name="Password" placeholder="Password" required="" />
+					<input id="pwd" type="password" name="Password" placeholder="New Password" required="" minlength="8" maxlength="20"/>
 				<div class="icon-w3">
 					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 				</div>
 				</div>
 				<div class="form-sub-w3">
-					<input type="password" name="CPassword" placeholder="Confirm Password" required="" />
+					<input id="cpwd" type="password" name="CPassword" placeholder="Confirm Password" required="" minlength="8" maxlength="20"/>
 				<div class="icon-w3">
 					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 				</div>
 				</div>
-
 				<div class="submit-w3l">
-					<a href="#modal">Sign Up</a>
+					<a id="su" href="#modal">Reset</a>
 				</div>
 			</form>
-		</div>
+			<!--Form-->
+			<script type="text/javascript" src="js/form.js"></script>
 <!--//form-ends-here-->
 </div>
 
@@ -91,8 +89,8 @@
 
 	<!--#modal-->
 	<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" style="font-family: 'Droid Sans', sans-serif;">
-			<br><br>Please check your e-mail to verify your email id and fill in your bio!<br><br><br><br>
-			<button href="#" class="remodal-confirm">Ok</button>
+			<br><br>Your password has succesfully reset. Click OK to update your new password.<br><br><br><br>
+			<button onclick="document.f1.submit();" class="remodal-confirm">Update Password</button>
 	</div>
 
 </body>

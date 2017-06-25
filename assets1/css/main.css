@@ -2372,7 +2372,7 @@
 
 /* Thumbnails */
 
-	.thumbnails {
+	#main {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2589,7 +2589,7 @@
 		}
 
 		#header .avatar {
-			border-radius: 100%;
+			border-radius: 50%;
 			display: inline-block;
 			margin: 0 0 2em 0;
 			padding: 0.5em;
@@ -2598,9 +2598,9 @@
 		}
 
 			#header .avatar img {
-				border-radius: 100%;
+				border-radius: 50%;
+				width: 200px;
 				display: block;
-				width: 10em;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -2640,7 +2640,6 @@
 		.fileUpload {
     position: relative;
     overflow: hidden;
-    margin: 10px;
 }
 		.fileUpload input.upload {
     position: absolute;
@@ -2656,3 +2655,6 @@
 	.fileUpload input:hover{
 	 background-color:#2196f3
 }
+	ul>li{
+	list-style-type:none;
+	display:inline-block;}

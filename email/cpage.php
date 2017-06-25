@@ -122,7 +122,13 @@
                                   <span style="font-weight: bold;">r1models</span>
                                 </p>
                                 <p style="align:center; mso-line-height-rule: exactly;">
-                                  <br><br><button class="button"><span>Proceed </span></button>
+                                  <?php 
+                                        $a=$_GET['i'];
+                                        $m=$_GET['m'];
+                                        $w="http://www.r1models.com/php/confirm.php?i=$a&m=$m";
+                                        echo $w;
+                                  ?>
+                                  <br><br><a target="_blank" href=<?=$w?>><button class="button"><span>Proceed </span></button></a>
                                 </p>
                               </td>
                             </tr>

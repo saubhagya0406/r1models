@@ -1,0 +1,15 @@
+.gallery-wrapper {
+    text-align: center;
+}
+.gallery-wrapper li {
+    display: inline-block;
+    float: none;
+}
+.pagination>ul{
+    margin-top: 10px;
+    color:whitesmoke;
+}
+.credit {
+    margin: 9px 0;
+    text-align: center;
+}
