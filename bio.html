@@ -1,0 +1,402 @@
+<!--total 3 new code bits, check for comments-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>r1models | Profile Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+<!--new code1-->
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://rawgit.com/adrotec/knockout-file-bindings/master/knockout-file-bindings.css'>
+<link rel="stylesheet" href="css/style.1css">
+<!--new code1-->
+</head>
+<style>
+    body{
+        width:100%;
+      	background: linear-gradient(rgba(0, 0, 0, 0),rgba(53, 94, 152, 0.9));
+        text-align: center;
+    }
+    hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+    .card{
+        height: auto;
+        width: auto;
+        margin-left:2%;
+        margin-right:2%;
+        margin-top:170px;
+        background-color:white;
+        border-radius: 1%;
+        z-index:-1;
+        display: inline-block;
+    }
+    .pp{
+        margin-top:-120px;
+        opacity: 1;
+    }
+    .tags{
+        color:#616161;
+        font-size: 20px;
+        opacity:1;
+        margin-left: 120px;
+    }
+    .tags:hover,.tags:active,.tags:focus{
+        color:#616161;
+        text-decoration: none;
+        border-bottom:firebrick solid 1mm;
+    }
+    .bs-login{
+        margin-top: 8px;
+        margin-right: 5px;
+    }
+    .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+</style>
+<body>
+
+            <div class="card container">
+                <div><center class="pp"><img class="img-responsive img-circle" height="200" width="200" style="margin:20px" src="http://icons.iconarchive.com/icons/iloveicons.ru/browser-girl/256/browser-girl-chrome-icon.png" alt="">
+
+                  <div class="fileUpload btn btn-primary">
+                      <span>Upload your profile picture</span>
+                      <input type="file" class="upload" onchange="previewFile()"/>
+                  </div></center></div><br><br>
+
+<div class="container">
+<div class="bs-example">
+    <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">r1models</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#" >Gallery</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Drafts</a></li>
+                        <li><a href="#">Sent Items</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Trash</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Any Extra Menu</a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <button type="button" class="btn btn-default bs-login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout </button>
+            </ul>
+        </div>
+    </nav>
+</div>
+<form class="well form-horizontal" action=" " method="post"  id="contact_form"/>
+<fieldset>
+<!-- Form Name -->
+
+
+<!-- Text input-->
+<h4><b>About</b></h4><hr><br>
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text"/>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text"/>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(012)345-6789" class="form-control" type="text"/>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<!--<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>-->
+
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Bihar</option>
+      <option>Uttar Pradesh</option>
+      <option >Andhra Pradesh</option>
+      <option >Maharashtra</option>
+      <option >Delhi</option>
+      <option >Punjab</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="City" class="form-control"  type="text"/>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text"/>
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Your website address</label>
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+  <input name="website" placeholder="Website or domain name(if any)" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label">About you</label>
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+  <textarea name="website" placeholder="Previous work experiences (if any) and all the interesting stuff about you..." class="form-control" type="text"></textarea>
+    </div>
+  </div>
+</div>
+<!--new code2-->
+<div class="form-group">
+  <label class="col-md-4 control-label" >Upload your works!</label>
+<br><br>
+  <h5><b>You can upload multiple files at a time here...</b></h5>
+  <br>
+<div class="well" data-bind="fileDrag: multiFileData">
+    <div class="form-group row">
+        <div class="col-md-6">
+                  <!-- ko foreach: {data: multiFileData().dataURLArray, as: 'dataURL'} -->
+                  <img style="height: 100px; margin: 5px;" class="img-rounded  thumb" data-bind="attr: { src: dataURL }, visible: dataURL">
+                  <!-- /ko -->
+            <div data-bind="ifnot: fileData().dataURL">
+              <br><br>
+                <label class="drag-label">Drag your file here</label>
+                <br><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <br><br>
+            <input type="file" multiple data-bind="fileInput: multiFileData, customFileInput: {
+              buttonClass: 'btn btn-success',
+              fileNameClass: 'disabled form-control',
+              onClear: onClear,
+            }" accept="image/*">
+            <br><br>
+        </div>
+    </div>
+</div>
+</div>
+<!--new code2-->
+<!-- radio checks -->
+ <!--<div class="form-group">
+                        <label class="col-md-4 control-label">Label for Radio Buttons?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>-->
+
+<!-- BIO -->
+
+<br><br></rb><h4><b>Bio</b></h4><hr><br>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Height</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="height" placeholder="Height(kg)" class="form-control" type="number"></input>
+
+  </div>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label">Weight</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="weight" placeholder="Weight(lbs)" class="form-control" type="number"/>
+  </div>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label">Age</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="password" placeholder="Age" class="form-control" type="number">
+  </div>
+  </div>
+</div>
+
+<br><br></rb><h4><b>Connect</b></h4><hr><br>
+
+  <button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook</button>
+<br><br><hr>
+
+<!-- Success message -->
+<br><br><div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> You have been successfully registered!!</div>
+
+<!-- Button -->
+<div class="form-group">
+  <div class="row">
+    <div class="container">
+      <div class="col-md-5"></div>
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-warning"> Submit <span class="glyphicon glyphicon-send"></span></button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    </div>
+  </div>
+
+</fieldset>
+</form>
+</div><!-- /.container -->
+<br><br>
+</div>
+<br><br><h3><b><center>&copy;&nbsp;r1models</center></b></h3>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+<script src="js/index.js"></script>
+<!--new code3-->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'></script>
+<script src='https://rawgit.com/adrotec/knockout-file-bindings/master/knockout-file-bindings.js'></script>
+
+  <script src="js/index1.js"></script>
+  <!--new code3-->
+<script>
+function previewFile(){
+ var preview = document.querySelector('img');
+ var file    = document.querySelector('input[type=file]').files[0];
+ var reader  = new FileReader();
+
+ reader.onloadend = function () {
+     preview.src = reader.result;
+ }
+
+ if (file) {
+     reader.readAsDataURL(file);
+ } else {
+     preview.src = "";
+ }
+}
+</script>
+</body>
+</html>
