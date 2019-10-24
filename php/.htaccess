@@ -1,2 +1,0 @@
-AuthName "protected"
-AuthUserFile "/home/r1models/.htpasswds/public_html/php/passwd"
